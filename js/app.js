@@ -1,53 +1,126 @@
-var namee = prompt("what is your name")
-alert("hey, wlecome to my website " + namee)
+'use strict';
 
- var talk = prompt("so do you working? plese answer yes or no").toLowerCase();
+var score = 0;
+var namee = prompt('What is your name?');
+console.log('User name: ' + namee);
 
- if (talk == "yes" || talk == "y") {
-   
-     alert("good job man")
+alert('Hi ' + namee + ', Welcome to my page!');
+alert('let\'s play a guessing game about me. please answer Yes or No answers are valid.');
 
-}else if (talk == "n" ||tlak=="no") {
-        alert("im sorry man")
-        
+ function yesCorrect (question) {
+     if (question.toUpperCase() === 'YES') {
+         score++;
+         alert("Yes!, you are right.");
+     }
+     else if (question.toUpperCase() === 'NO'){
+         alert("Sorry, wrong answer.");
+     }
+     else {
+         alert("This answer is not valid");
+     }
+ }
+
+ function noCorrect (question) {
+     if (question.toUpperCase() === 'YES' || question.toUpperCase() === "y") {
+         alert("Yes! you are right.");
     }
+    else if (question.toUpperCase() === 'NO'|| question.toUpperCase() ==="n"){
+         score++;
+       
+         alert("Sorry, wrong answer.");
+     }
+     else {
+         alert("This answer is not valid");
+     }
+ }
 
-     var eat = prompt("so tell me do you love italian food? plese answer yes or no").toLowerCase();
-     if (eat == "yes" || eat == "y") {
-        var eat = prompt("so do you love pizza or pasta ? ").toLowerCase();
-   
-         alert("good same man")
-    
-    }else if (eat == "n" ||eat=="no") {
-        
-             alert("mm same me")
-            
+
+
+  var favColor = prompt(namee + " Is my favorite color Red? Yes or No:");
+  console.log('my favorite color: ' + favColor);
+
+ noCorrect(favColor);
+
+
+
+  var coffee = prompt(namee + ' Do I like coffee? Yes or No:');
+  console.log('coffee: ' + coffee);
+
+  noCorrect(coffee);
+
+
+
+  var eat = prompt(namee + ' Do I like italian food? Yes or No');
+  console.log('eat: ' + eat);
+
+  noCorrect(eat);
+
+
+  var favmus = prompt(namee + ' Do I prefer classic music? Yes or No');
+  console.log('favmus: ' + favmus);
+
+  yesCorrect(favmus);
+
+
+ var cat = prompt(namee + ' Do I love cats? Yes or No');
+  console.log('cat: ' + cat);
+
+  noCorrect(cat);
+
+
+// Guess Question  6
+   function guessFavNumber() {
+     var counter = 1;
+      if (counter === 5) {
+          alert('Sorry you run out of guesses');
+     }
+     while (counter < 5 && number !==26) {
+         var number = parseInt(prompt('Guess my favorite number'));
+        if (number >26) {
+             alert('You guessed too high! Guess again');
+              counter++;
+          } else if (number < 26) {
+             alert('You guessed too low! Guess again');
+              counter++;
+          }
+      }
+     if (number === 26) {
+          alert('That is correct! My favorite number is 26!');
+       
+      }
+  }
+
+ guessFavNumber();
+
+
+// Guess Question 7
+
+function array() {
+    var FavTeam =['juventus', 'Bayern', 'city', 'Barcelona', 'paris']
+
+    for (var i = 0; i < 6; i++) {
+        var userAnsw = prompt('Can you guess my favorite team?');
+        var guess = userAnsw.toLowerCase();
+
+        for (var j = 0; j < FavTeam.length; j++){
+            if (guess === FavTeam[j]) {
+                alert('Congrats you got it right!!!');
+                score++;
+                i = 6;
+                break;
+            }
         }
-
-
-
-     var hob = prompt("do you love football? plese answer yes or no").toLowerCase();
-     if (hob == "yes" || hob == "y") {
-
-   
-        alert("good same me man")
-    
-     }else if (hob == "n" ||hob=="no") {
-        
-             alert(" same me")
-            
-       }
-
-
-    var mus = prompt("do you love music? plese answer yes or no").toLowerCase();
-    if (mus == "yes" || mus == "y") {
-
-   
-        alert("good same me man")
-    
-    }else if (mus == "n" ||mus=="no") {
-        
-            alert(" same me")
-            
+        if (i !==6){
+            alert('Sorry wrong answer, try again');
         }
+    }
+}
+
+array();
+
+alert('My favorite team are: Barcelona, Bayern Munich and manchester city, ');
+
+alert('Good Job man!... You are right ' + score + ' correct answers!');
+
+
 
