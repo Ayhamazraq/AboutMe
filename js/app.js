@@ -7,7 +7,7 @@ console.log('User name: ' + namee);
 alert('Hi ' + namee + ', Welcome to my page!');
 alert('let\'s play a guessing game about me. please answer Yes or No answers are valid.');
 
- function yesCorrect (question) {
+ function yCorrect(question) {
      if (question.toUpperCase() === 'YES') {
          score++;
          alert("Yes!, you are right.");
@@ -20,7 +20,7 @@ alert('let\'s play a guessing game about me. please answer Yes or No answers are
      }
  }
 
- function noCorrect (question) {
+ function nCorrect(question) {
      if (question.toUpperCase() === 'YES' || question.toUpperCase() === "y") {
          alert("Yes! you are right.");
     }
@@ -39,37 +39,37 @@ alert('let\'s play a guessing game about me. please answer Yes or No answers are
   var favColor = prompt(namee + " Is my favorite color Red? Yes or No:");
   console.log('my favorite color: ' + favColor);
 
- noCorrect(favColor);
+ nCorrect(favColor);
 
 
 
   var coffee = prompt(namee + ' Do I like coffee? Yes or No:');
   console.log('coffee: ' + coffee);
 
-  noCorrect(coffee);
+  nCorrect(coffee);
 
 
 
   var eat = prompt(namee + ' Do I like italian food? Yes or No');
   console.log('eat: ' + eat);
 
-  noCorrect(eat);
+  nCorrect(eat);
 
 
   var favmus = prompt(namee + ' Do I prefer classic music? Yes or No');
   console.log('favmus: ' + favmus);
 
-  yesCorrect(favmus);
+  yCorrect(favmus);
 
 
  var cat = prompt(namee + ' Do I love cats? Yes or No');
   console.log('cat: ' + cat);
 
-  noCorrect(cat);
+  nCorrect(cat);
 
 
 // Guess Question  6
-   function guessFavNumber() {
+   function guessNumber() {
      var counter = 1;
       if (counter === 5) {
           alert('Sorry you run out of guesses');
@@ -90,12 +90,12 @@ alert('let\'s play a guessing game about me. please answer Yes or No answers are
       }
   }
 
- guessFavNumber();
+ guessNumber();
 
 
 // Guess Question 7
 
-function array() {
+function guessTeam() {
     var FavTeam =['juventus', 'Bayern', 'city', 'Barcelona', 'paris']
 
     for (var i = 0; i < 6; i++) {
@@ -116,7 +116,7 @@ function array() {
     }
 }
 
-array();
+guessTeam();
 
 alert('My favorite team are: Barcelona, Bayern Munich and manchester city, ');
 
