@@ -92,9 +92,13 @@ ul li {
 
 }
 
-.img1{
-    margin-left: 1000px;
-    border: black;
-    position: fixed;
+#imgs{
+    
+    border:black;
+    position:absolute;
     display: inline-block;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 100px;
 }
+ 
